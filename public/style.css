@@ -12,7 +12,7 @@
     --bg-color: #fff;
     --snd-bg-color: #d5fdf9;
     --text-color: #000;
-    --main-color: #007f73;
+    --main-color: #006e7f;
 
 }
 html{
@@ -71,4 +71,33 @@ section{
     font-size: 3.6rem;
     color: var(--bg-color);
     cursor: pointer;
+}
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-img img{
+         width: 25vw;
+         border-radius: 50%;
+         box-shadow: 0 0 25px var(--main-color);
+         cursor: pointer;
+         animation: floatImage 4s ease-in-out infinite;
+         transition: 0.4s ease;
+}
+.home-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 45px var(--main-color);
+}
+@keyframes floatImage {
+      0%{
+        transform: translateY(0);
+      }
+      50%{
+        transform: translateY(-2.4rem);
+      }
+      100%{
+        transform: translateY(0);
+      }
 }
